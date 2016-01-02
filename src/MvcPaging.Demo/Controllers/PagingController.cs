@@ -42,7 +42,7 @@ namespace MvcPaging.Demo.Controllers
 
 		public ActionResult CustomPageRouteValueKey(SearchModel search)
 		{
-			int currentPageIndex = search.page.HasValue ? search.page.Value - 1 : 0;
+			var currentPageIndex = search.page.HasValue ? search.page.Value - 1 : 0;
 			return View(allProducts.ToPagedList(currentPageIndex, DefaultPageSize));
 		}
 
