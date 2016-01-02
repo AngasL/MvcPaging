@@ -43,7 +43,7 @@ namespace MvcPaging.Demo.Controllers
 		public ActionResult CustomPageRouteValueKey(SearchModel search)
 		{
 			int currentPageIndex = search.page.HasValue ? search.page.Value - 1 : 0;
-			return View(this.allProducts.ToPagedList(currentPageIndex, DefaultPageSize));
+			return View(allProducts.ToPagedList(currentPageIndex, DefaultPageSize));
 		}
 
 		public ActionResult ViewByCategory(string categoryName, int? page)
